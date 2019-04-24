@@ -8,6 +8,12 @@ public class MainAudio : MonoBehaviour
     AudioSource _audioSource;
     public static float[] _samples = new float[512];
     public static float[] _freqBand = new float[8];
+    public static float[] _bandBuffer = new float[8];
+    float[] _bufferDecrease = new float[8];
+    float[] highestBands = new float[8];
+
+    public static float[] _audioBand = new float[8];
+    public static float[] _audioBandBuffer = new float[8];
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +27,34 @@ public class MainAudio : MonoBehaviour
     {
         getSpectrumAudioSource();
         MakeFreqBands();
+        BandBuffer();
+        createAudioBands();
     }
 
     void getSpectrumAudioSource(){
         _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);
+    }
+
+    void BandBuffer(){
+        for(int i = 0; i < 8; i++){
+            if(_freqBand[i] > _bandBuffer[i]){
+                _bandBuffer[i] = _freqBand[i];
+                _bufferDecrease[i] = 0.005f;
+            }else{
+                _bandBuffer[i] -= _bufferDecrease[i];
+                _bufferDecrease[i] *= 1.2f;
+            }
+        }
+    }
+
+    void createAudioBands(){
+        for(int i = 0; i < 8; i++){
+            if(_freqBand[i] > highestBands[i]){
+                highestBands[i] = _freqBand[i];
+            }
+            _audioBand[i] = (_freqBand[i] / highestBands[i]);
+            _audioBandBuffer[i] = (_bandBuffer[i] / highestBands[i]);
+        }
     }
 
     //Divide the audio to 8 floats
