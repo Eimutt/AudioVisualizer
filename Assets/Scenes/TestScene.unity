@@ -196,13 +196,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.36641487, y: -0, z: -0, w: 0.93045163}
-  m_LocalPosition: {x: 0, y: 140, z: -156}
+  m_LocalRotation: {x: 0.43802693, y: -0, z: -0, w: 0.8989619}
+  m_LocalPosition: {x: 0, y: 89, z: -78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 42.989002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 51.956, y: 0, z: 0}
 --- !u!1 &565820326
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +308,8 @@ GameObject:
   - component: {fileID: 1121481477}
   - component: {fileID: 1121481478}
   - component: {fileID: 1121481479}
+  - component: {fileID: 1121481480}
+  - component: {fileID: 1121481481}
   m_Layer: 0
   m_Name: VisualizationRoot
   m_TagString: Untagged
@@ -468,13 +470,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 6205612247734867009, guid: 5a69dcfdea947ca4888aaf3500743ee2,
     type: 3}
-  _maxScale: 100
+  _maxScale: 300
   _scaleMult: 10
   _startScale: 2
   startPos: -40
   posStep: 10
   baseSize: 5
   useBuffer: 1
+--- !u!114 &1121481480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121481474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a986114eb90064293e9e0de629a439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spherePrefab: {fileID: 1470099010094953632, guid: 3320e010b96cb594a8bb80bbe0363b7c,
+    type: 3}
+  bandID: 0
+--- !u!114 &1121481481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121481474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0e9c8fad55b3c44943ef25d77fb114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spherePrefab: {fileID: 1470099010094953632, guid: 3320e010b96cb594a8bb80bbe0363b7c,
+    type: 3}
+  nrOfSpheres: 20
+  spinSpeed: 10
 --- !u!1 &1892262583
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892262583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 52, z: -30}
+  m_LocalPosition: {x: 0, y: 52, z: -17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1121481476}

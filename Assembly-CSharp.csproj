@@ -57,6 +57,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\InstantEight.cs" />
      <Compile Include="Assets\Scripts\InstantiateRing.cs" />
+     <Compile Include="Assets\Scripts\InstantiateRing_WeirdBUG.cs" />
+     <Compile Include="Assets\Scripts\InstantSphere.cs" />
+     <Compile Include="Assets\Scripts\InstantSphereRing.cs" />
      <Compile Include="Assets\Scripts\MainAudio.cs" />
      <Compile Include="Assets\Scripts\Old\AudioSpectrum.cs" />
      <Compile Include="Assets\Scripts\Old\AudioSyncer.cs" />

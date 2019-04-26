@@ -19,7 +19,7 @@ public class MainAudio : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
         _audioSource.time = _audioSource.clip.length * 0.3f;
-        _audioSource.volume = 1.0f;
+        //_audioSource.volume = 1.0f;
     }
 
     // Update is called once per frame

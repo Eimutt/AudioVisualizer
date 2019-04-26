@@ -54,7 +54,7 @@ public class InstantEight : MonoBehaviour
                         );
                     color = new Color(MainAudio._audioBand[i],MainAudio._audioBand[i],MainAudio._audioBand[i]);
                 }
-                //_sampleCube[i].GetComponent<Renderer>().  .material.SetColor("_EmissionColor",new Color(.0f,.0f,.0f));
+                 _sampleCube[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(MainAudio._audioBand[i]*0.05f,MainAudio._audioBand[i]*0.05f,MainAudio._audioBand[i]*0.05f));
             }         
         }
     }
